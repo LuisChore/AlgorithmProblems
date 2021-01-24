@@ -20,7 +20,7 @@ void construct_st(int l=0,int r = n-1,int i = 0){
 lli max_st(int s,int e,int l=0,int r = n-1,int i = 0){
   if(e<l || s>r)
     return - inf;
-  if(l<=s && e<=r)
+  if(s<=l && r<=e)
     return maxst[i];
   int mid = (l + r) >> 1;
   lli L = max_st(s,e,l,mid,i*2+1);
@@ -46,7 +46,7 @@ void update(int pos,lli value,int l = 0,int r = n-1,int i = 0){
 int main(){
   cin.sync_with_stdio(0);
   cin.tie(0);
-  
+
   vector<int> S(6);
   for(int i=0;i<6;i++){
     cin >> S[i];
