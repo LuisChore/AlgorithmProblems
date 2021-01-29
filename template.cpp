@@ -7,6 +7,7 @@ using namespace __gnu_pbds;
 
 typedef long long lli;
 const lli inf = 1e18;
+const int inf_int = 1e9;
 
 typedef tree<
 lli,
